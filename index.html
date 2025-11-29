@@ -1,1 +1,36 @@
-<img src="assets/logo.png" class="logo">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encrypted Voting DApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="brand">
+        <img src="assets/logo.png" class="logo">
+    </div>
+
+    <h1>🗳️ Encrypted Voting DApp (Zama Inspired)</h1>
+    <p>Your vote is encrypted — we compute results without exposing data.</p>
+
+    <div class="vote-box">
+        <button onclick="castVote('A')">Vote A</button>
+        <button onclick="castVote('B')">Vote B</button>
+    </div>
+
+    <h3>Encrypted Votes:</h3>
+    <pre id="encryptedVotes"></pre>
+
+    <button class="tally-btn" onclick="tallyVotes()">Compute Encrypted Tally</button>
+
+    <h3>Encrypted Result:</h3>
+    <pre id="encResult"></pre>
+
+    <h3>Decrypted Result (Admin Only):</h3>
+    <pre id="decResult"></pre>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
