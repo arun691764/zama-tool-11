@@ -2,35 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Encrypted Voting DApp</title>
+    <title>Zama Encrypted Voting Demo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="brand">
-        <img src="assets/logo.png" class="logo">
-    </div>
+<div class="container">
 
-    <h1>🗳️ Encrypted Voting DApp (Zama Inspired)</h1>
-    <p>Your vote is encrypted — we compute results without exposing data.</p>
+    <header>
+        <img src="assets/logo.png" class="logo" alt="Logo">
+        <h1>Zama Encrypted Voting Demo</h1>
+        <p class="subtitle">Privacy-Preserving Voting using Encrypted Computation</p>
+    </header>
 
-    <div class="vote-box">
-        <button onclick="castVote('A')">Vote A</button>
-        <button onclick="castVote('B')">Vote B</button>
-    </div>
+    <section class="card vote-section">
+        <h2>Cast Your Vote</h2>
+        <div class="vote-buttons">
+            <button onclick="castVote('A')" class="btn primary">Vote A</button>
+            <button onclick="castVote('B')" class="btn secondary">Vote B</button>
+        </div>
+    </section>
 
-    <h3>Encrypted Votes:</h3>
-    <pre id="encryptedVotes"></pre>
+    <section class="card">
+        <h2>Encrypted Votes</h2>
+        <pre id="encryptedVotes" class="output-box"></pre>
+    </section>
 
-    <button class="tally-btn" onclick="tallyVotes()">Compute Encrypted Tally</button>
+    <section class="card">
+        <button onclick="tallyVotes()" class="btn compute-btn">Compute Encrypted Tally</button>
+    </section>
 
-    <h3>Encrypted Result:</h3>
-    <pre id="encResult"></pre>
+    <section class="card">
+        <h2>Encrypted Result</h2>
+        <pre id="encResult" class="output-box"></pre>
+    </section>
 
-    <h3>Decrypted Result (Admin Only):</h3>
-    <pre id="decResult"></pre>
+    <section class="card">
+        <h2>Decrypted Result (Admin)</h2>
+        <pre id="decResult" class="output-box"></pre>
+    </section>
 
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
-
